@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+  <meta charset="gbk">
+  <meta name="robots" content="all">
+  <meta name="author" content="Tencent-CP">
+  <meta name="Copyright" content="Tencent">
+  <meta name="Description" content="">
+  <meta name="Keywords" content="腾讯游戏">
+  <title>超级签到 - 英雄杀 - 腾讯游戏</title>
+  <!-- 页面设计：cp | 页面制作：cp | 创建：2015-04-21 -->
+  <style>
+  body,
+  dl,
+  dd,
+  ul,
+  ol,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  form {
+    margin: 0;
+  }
+  
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font: 12px/1.5 tahoma, '\5b8b\4f53', sans-serif;
+  }
+  
+  body {}
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 100%;
+  }
+  
+  em,
+  b {
+    font-style: normal;
+  }
+  
+  a {
+    text-decoration: none !important;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  img {
+    border: 0;
+  }
+  
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 100%;
+    outline: none;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  td,
+  th,
+  ul,
+  ol {
+    padding: 0;
+  }
+  
+  html {
+    height: 100%;
+    font-family: '\5FAE\8F6F\96C5\9ED1';
+    /*推荐*/
+  }
+  
+  body {
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  p,
+  a,
+  button,
+  span {
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  input {
+    outline: none;
+  }
+  
+  .bd {
+    position: relative;
+    width: 990px;
+    height: 1604px;
+    margin: 0 auto;
+  }
+  
+  * {
+    outline: none;
+  }
+  
+  button {
+    overflow: hidden;
+    text-indent: -200px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .seo {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+  
+  .contain {
+    width: 100%;
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/bg.jpg") no-repeat center 0;
+    background-size:cover;
+  }
+  
+  .scene01 {
+    height: 480px;
+  }
+  
+  .scene01 .bd {
+    height: 480px;
+  }
+  
+  .scene01 .bd .v {
+    width: 390px;
+    text-align: center;
+    position: absolute;
+    left: 40px;
+    top: 370px;
+    color: #c3241a;
+    font-size: 26px;
+    font-weight: normal;
+  }
+  
+  .scene01 .bd .login {
+    width: 545px;
+    position: absolute;
+    left: 4px;
+    top: 432px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #ffffff;
+  }
+  
+  .scene01 .bd .login p {
+    display: inline-block;
+    padding: 0 5px 0 5px;
+    height: 33px;
+    float: left;
+    line-height: 33px;
+    color: #fff;
+    background: #ab5d36;
+  }
+  
+  .scene01 .bd .login a {
+    cursor: pointer;
+    color: #ffffff;
+  }
+  
+  .scene01 .bd .my-record-btn {
+    color: #ffffff;
+    display: block;
+    float: left;
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/btn-login.png") no-repeat;
+    height: 56px;
+    width: 172px;
+    line-height: 28px;
+    position: absolute;
+    right: 30px;
+    text-decoration: none;
+    top: -11px;
+  }
+  
+  .scene01 .bd .my-record-btn:hover {
+    background-position: -173px 0;
+  }
+  
+  .scene01 .bd .my-record {
+    background: #5f432e!important;
+    padding-left: 9px;
+    width: 210px;
+    padding-right: 20px!important;
+  }
+  
+  .nav-btn {
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/btn-nav.png") no-repeat;
+    position: absolute;
+    width: 78px;
+    height: 254px;
+    display: block;
+    z-index: 2;
+  }
+  
+  .nav-my-qd {
+    top: 76px;
+    left: 28px;
+    background-position: -0px -0px;
+  }
+  
+  .nav-my-makeh {
+    left: 28px;
+    top: 334px;
+    background-position: -0px -254px;
+  }
+  
+  .lq-btn {
+    width: 161px;
+    height: 162px;
+    top: 95px;
+    left: 770px;
+    z-index: 55;
+    position: absolute;
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/big-btn.png") no-repeat;
+    background-position: -0px -0px;
+  }
+  
+  .lq-btn:hover {
+    background-position: -0px -183px;
+  }
+  
+  .nav-my-qd:hover {
+    background-position: -77px 0px;
+  }
+  
+  .nav-my-makeh:hover {
+    background-position: -78px -254px;
+  }
+  
+  .scene01 .para01 *,
+  .scene01 .para02 * {
+    vertical-align: middle;
+  }
+  
+  .scene02 .my-sign-in {
+    width: 640px;
+    height: 186px;
+    position: absolute;
+    top: 120px;
+    left: 178px;
+  }
+  
+  .scene02 .my-sign-in div {
+    padding: 5px 0;
+  }
+  
+  .scene02 .my-sign-in .btn {
+    margin: 0px 4px;
+    width: 191px;
+    height: 72px;
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/btn-qd.png") no-repeat;
+  }
+  
+  .scene02 .my-sign-in .content01 .btn01 {
+    background-position: -6px -9px;
+  }
+  
+  .scene02 .my-sign-in .content01 .btn01:hover {
+    background-position: -200px -9px;
+  }
+  
+  .scene02 .my-sign-in .content01 .btn02 {
+    background-position: -6px -98px;
+  }
+  
+  .scene02 .my-sign-in .content01 .btn02:hover {
+    background-position: -200px -98px;
+  }
+  
+  .scene02 .my-sign-in .content02 .btn01 {
+    background-position: -6px -176px;
+  }
+  
+  .scene02 .my-sign-in .content02 .btn01:hover {
+    background-position: -200px -176px;
+  }
+  
+  .scene02 .my-sign-in .content02 .btn02 {
+    background-position: -200px -257px;
+  }
+  
+  .scene02 .my-sign-in .content02 .btn02:hover {
+    background-position: -6px -257px;
+  }
+  
+  .scene02 .my-sign-in span {
+    color: #ffdba8;
+    font-size: 22px;
+    padding-right: 0px;
+    width: 166px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+  }
+  
+  .scene02 {
+    overflow: hidden;
+  }
+  
+  .scene02 .bd {
+    position: relative;
+    width: 1000px;
+    height: 1080px;
+  }
+  
+  .scene02 .process-bar {
+    width: 540px;
+    height: 94px;
+    line-height: 66px;
+    color: #fadec6;
+    font-size: 16px;
+    position: absolute;
+    text-align: center;
+    left: 180px;
+    top: 106px;
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/bg-process.png") no-repeat;
+  }
+  
+  .scene02 .process-bar .btn {
+    width: 200px;
+    height: 79px;
+    text-indent: -9999px;
+    overflow: hidden;
+    position: absolute;
+    top: 7px;
+    right: -10px;
+    display: block;
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/btn-chb.png") no-repeat;
+  }
+  
+  .scene02 .process-bar .btn:hover {
+    background-position: 0px -80px;
+  }
+  
+  .scene02 .process-btn {
+    position: absolute;
+    right: -160px;
+  }
+  
+  .scene02 .process-body {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    height: 68px;
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/bg-process-bg.png") repeat-x;
+  }
+  
+  .scene02 .process-body span {
+    position: absolute;
+    left: 43%;
+    height: 68px;
+    line-height: 68px;
+    width: 99px;
+    font-size: 24px;
+    color: #8f1308;
+  }
+  
+  .scene02 .process-btn {}
+  
+  .scene02 .process-mask {
+    width: 31px;
+    height: 94px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: block;
+    z-index: 10;
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/bg-process-bd.png") no-repeat;
+  }
+  
+  .scene02 .btn01,
+  .scene02 .btn02,
+  .scene02 .btn03 {
+    top: 478px;
+  }
+  
+  .scene02 .btn04,
+  .scene02 .btn05 {
+    top: 693px;
+  }
+  
+  .scene02 .btn01 {
+    left: 181px;
+  }
+  
+  .scene02 .btn02 {
+    left: 429px;
+  }
+  
+  .scene02 .btn03 {
+    left: 680px;
+  }
+  
+  .scene02 .btn04 {
+    left: 308px;
+  }
+  
+  .scene02 .btn05 {
+    left: 556px;
+  }
+  
+  .scene02 .ruler {
+    font-size: 12px;
+    color: #988070;
+    width: 440px;
+    position: absolute;
+    line-height: 22px;
+    top: 890px;
+    left: 52px;
+  }
+  
+  .scene02 .ruler .right {
+    font-size: 12px;
+    color: #988070;
+    position: absolute;
+    line-height: 25px;
+    top: 890px;
+    left: 522px;
+  }
+  
+  .scene02 .marquee {
+    overflow: hidden;
+    width: 490px;
+    height: 300px;
+    line-height: 26px;
+    position: absolute;
+    left: 272px;
+    top: 320px;
+    color: #ffedd1;
+    font-size: 14px;
+  }
+  
+  .scene02 .marquee div {
+    overflow: hidden;
+    zoom: 1;
+  }
+  
+  .scene02 .marquee .name {
+    float: left;
+    width: 180px;
+  }
+  
+  .scene02 .marquee .gift {
+    float: left;
+    width: 80px;
+    padding-left: 1px;
+  }
+  
+  .scene02 .marquee .date {
+    float: left;
+    padding-left: 1px;
+  }
+  
+  .invited {
+    display: none;
+    width: 573px;
+    height: 297px;
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/alert.png") no-repeat;
+  }
+  
+  .invited .invited_link {
+    position: absolute;
+    top: 124px;
+    left: 57px;
+    width: 390px;
+    height: 38px;
+    line-height: 38px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    text-indent: 0.5em;
+  }
+  
+  .invited .btn {
+    position: absolute;
+    left: 194px;
+    top: 190px;
+    width: 186px;
+    overflow: hidden;
+    height: 66px;
+    text-indent: -9999rem;
+    background: url(about:blank);
+  }
+  
+  .invited .close {
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    width: 34px;
+    height: 34px;
+    background: url(about:blank);
+    cursor: pointer;
+    text-indent: -20em;
+    overflow: hidden;
+  }
+  /* footer */
+  
+  #footer_ied {
+    background-color: #000;
+    padding: 40px 0 35px 0;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+  }
+  
+  .wrap_ied a {
+    color: #fff;
+  }
+  /*bg_header*/
+  
+  .qd-content {
+    width: 130px;
+    height: 611px;
+    position: absolute;
+    top: 291px;
+    left: 560px;
+  }
+  
+  .qd-content ul li {
+    width: 130px;
+    height: 111px;
+    position: absolute;
+    z-index: 10;
+  }
+  
+  .qd-content .list1 {
+    top: 0px;
+  }
+  
+  .qd-content .list2 {
+    top: 126px;
+  }
+  
+  .qd-content .list3 {
+    top: 248px;
+  }
+  
+  .qd-content .list4 {
+    top: 370px;
+  }
+  
+  .qd-content .list5 {
+    top: 490px;
+  }
+  
+  .qd-content li .btn {
+    height: 39px;
+    width: 99px;
+    position: absolute;
+    overflow: hidden;
+    display: block;
+    top: 50px;
+    left: 18px;
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/btn-lqjl.png") no-repeat;
+    text-indent: -9999px;
+  }
+  
+  .qd-content li .btn:hover {
+    background-position: -99px 0px;
+  }
+  
+  .qd-content .hover-content {
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/hover-bg.png");
+    padding: 5px 15px 0 25px;
+  }
+  
+  .qd-content li img {
+    display: block;
+  }
+  
+  .qd-content .hover-box {
+    display: none;
+    width: 140px;
+    position: absolute;
+    right: -150px;
+  }
+  
+  .qd-content .hover-box p {
+    font-size: 14px;
+    text-align: center;
+    font-family: "微软雅黑";
+    color: #ffe1b7;
+  }
+  
+  .btn-game {
+    width: 180px;
+    height: 68px;
+    display: block;
+    right: 20px;
+    top: 440px;
+    position: fixed;
+    text-indent: -9999px;
+    background: url("http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/btn-join.png") no-repeat;
+  }
+  
+  .btn-game:hover {
+    background-position: -0px -72px;
+  }
+  
+  .btn-getpf {
+    width: 184px;
+    text-indent: -9999px;
+    height: 94px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    left: 806px;
+    top: 263px;
+  }
+  
+  .qdgz {
+    position: absolute;
+    z-index: 2;
+    top: 389px;
+    left: 223px;
+    font-size: 14px;
+    width: 300px;
+    color: #ffce9d;
+  }
+  
+  .qdgz li {
+    padding-bottom: 17px;
+  }
+  
+  .guize {
+    top: 651px;
+    width: 350px;
+  }
+  
+  .guize li {
+    padding-bottom: 12px;
+  }
+  </style>
+</head>
+
+<body>
+  <h1 style="height: 0; overflow: hidden;">英雄杀超级签到</h1>
+  <div class="contain">
+    <div class="bd">
+      <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/main-bg.jpg" style="position: absolute;top:0px;left: 0px" alt="" />
+      <div class="scene01">
+        <div class="bd">
+          <div class="login">
+            <p>亲爱的用户，请<a href="">[登录]</a></p>
+            <p class="my-record">我成功邀请的好友数：999个</p>
+            <a href="#" class="my-record-btn">&nbsp;</a>
+          </div>
+          <h2 class="title">活动时间:3月4日-4月2日</h2>
+          <a class="btn-game" href="#" target="_blank">进入游戏</a>
+          <a class="btn-getpf" href="#" title="领取皮肤">领取皮肤</a>
+        </div>
+      </div>
+      <div class="scene02">
+        <div class="bd">
+          <a class="nav-btn nav-my-qd" href="javascript:void(0)">&nbsp;</a>
+          <a class="nav-btn nav-my-makeh" href="javascript:void(0)">&nbsp;</a>
+          <!--领取皮肤-->
+          <a href="#" class="lq-btn">&nbsp;</a>
+          <div class="my-hb" style="display: none">
+            <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/jl-bg.png" style="position: absolute;left: 46px;" alt="" />
+            <div class="process-bar">
+              <div class="process-mask"></div>
+              <!-- TODO: 当前进度多少就给下面的 process-body标签的 css width多少, 67% 是百分百 把得到数值 * 0.67 -->
+              <div class="process-body" style="width:67%"><span>67%是百分百</span></div>
+              <a href="#" class="btn">点我拆开红包</a>
+            </div>
+            <div class="marquee">
+              <div id="marquee">
+                <div><span class="name">2016-03-03 &nbsp;&nbsp; 10:40:23</span><span class="gift">79350***</span><span class="date">获得了身份卡x1</span></div>
+                <div><span class="name">2016-03-03 &nbsp;&nbsp; 10:40:23</span><span class="gift">79350***</span><span class="date">获得了身份卡x1</span></div>
+                <div><span class="name">2016-03-03 &nbsp;&nbsp; 10:40:23</span><span class="gift">79350***</span><span class="date">获得了身份卡x1</span></div>
+                <div><span class="name">2016-03-03 &nbsp;&nbsp; 10:40:23</span><span class="gift">79350***</span><span class="date">获得了身份卡x1</span></div>
+                <div><span class="name">2016-03-03 &nbsp;&nbsp; 10:40:23</span><span class="gift">79350***</span><span class="date">获得了身份卡x1</span></div>
+                <div><span class="name">2016-03-03 &nbsp;&nbsp; 10:40:23</span><span class="gift">79350***</span><span class="date">获得了身份卡x1</span></div>
+                <div><span class="name">2016-03-03 &nbsp;&nbsp; 10:40:23</span><span class="gift">79350***</span><span class="date">获得了身份卡x1</span></div>
+                <div><span class="name">2016-03-03 &nbsp;&nbsp; 10:40:23</span><span class="gift">79350***</span><span class="date">获得了身份卡x1</span></div>
+                <div><span class="name">2016-03-03 &nbsp;&nbsp; 10:40:23</span><span class="gift">79350***</span><span class="date">获得了身份卡x1</span></div>
+                <div><span class="name">2016-03-03 &nbsp;&nbsp; 10:40:23</span><span class="gift">79350***</span><span class="date">获得了身份卡x1</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="my-qd" style="display: block">
+            <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/qd-bg.png" style="position: absolute;left: 44px;" alt="" />
+            <!-- 签到规则 -->
+            <ol class="qdgz">
+              <li>每天完成游戏对局胜利<span style="color: #ff1900">【2】</span>次可拥有一次签到机会，每天可签到一次。</li>
+              <li>累计签到一定天数即可领取奖励，全勤<span style="color: #ff1900">【30天】</span>即可领取非卖品花木兰限定皮肤，加油哦！</li>
+              <li>错过某一天签到，可以花费<span style="color: #ff1900">2Q</span>币补签。</li>
+              <li>额外补签时间：<span style="color: #ff1900">【6月2号 到 6月4号】</span>。</li>
+            </ol>
+            <!--概率规则-->
+            <ol class="qdgz guize">
+              <li>每进行一次签到/补签即可随机增加人品<span style="color: #ff1900">1-10%；</span></li>
+              <li>被邀请好友成功签到后可为您随机增加人品<span style="color: #ff1900">10%-20%；</span></li>
+              <li>当人品概率<span style="color: #ff1900">100%</span>时达到‘人品暴击’，可拆红包，随机获得英雄魂及道具奖励。</li>
+              <li>每次人品暴击后将重置为<span style="color: #ff1900">30%</span>。</li>
+            </ol>
+            <div class="my-sign-in">
+              <div class="content01">
+                <span>已签到次数:20次</span>
+                <button class="btn btn01">&nbsp;</button>
+                <button class="btn btn02" onClick="TGDialogS('invited')">&nbsp;</button>
+              </div>
+              <div class="content02">
+                <span>已签到次数:30次</span>
+                <button class="btn btn01">&nbsp;</button>
+                <button class="btn btn02">&nbsp;</button>
+              </div>
+            </div>
+            <!--签到内容-->
+            <div class="qd-content" id="qd-content">
+              <ul>
+                <li class="list1">
+                  <div class="hover-box">
+                    <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/hover-hd.png" alt="" />
+                    <!--hover后显示内容-->
+                    <div class="hover-content">
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                    </div>
+                    <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/hover-ft.png" alt="" />
+                  </div>
+                  <a class="btn" href="#">领取奖励</a>
+                </li>
+                <li class="list2">
+                  <div class="hover-box">
+                    <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/hover-hd.png" alt="" />
+                    <!--hover后显示内容-->
+                    <div class="hover-content">
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                    </div>
+                    <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/hover-ft.png" alt="" />
+                  </div>
+                  <a class="btn" href="#">领取奖励</a>
+                </li>
+                <li class="list3">
+                  <div class="hover-box">
+                    <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/hover-hd.png" alt="" />
+                    <!--hover后显示内容-->
+                    <div class="hover-content">
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                    </div>
+                    <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/hover-ft.png" alt="" />
+                  </div>
+                  <a class="btn" href="#">领取奖励</a>
+                </li>
+                <li class="list4">
+                  <div class="hover-box">
+                    <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/hover-hd.png" alt="" />
+                    <!--hover后显示内容-->
+                    <div class="hover-content">
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                    </div>
+                    <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/hover-ft.png" alt="" />
+                  </div>
+                  <a class="btn" href="#">领取奖励</a>
+                </li>
+                <li class="list5">
+                  <div class="hover-box">
+                    <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/hover-hd.png" alt="" />
+                    <!--hover后显示内容-->
+                    <div class="hover-content">
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                      <p>某某奖品</p>
+                    </div>
+                    <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/hover-ft.png" alt="" />
+                  </div>
+                  <a class="btn" href="#">领取奖励</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--装饰-->
+          <img src="http://game.gtimg.cn/images/yxs/cp/a20160421cjqd/huashi.png" style="position: absolute;top: 599px;left: 672px;" alt="" />
+          <div class="ruler" style="display: none">
+            <h2 class="seo">签到规则</h2>
+            <p>1. 每天完成游戏对局胜利2次可拥有一次签到机会，每天仅可签到一次；</p>
+            <p>2. 累计签到一定天数即可领取奖励，全勤即可领取非卖品限定皮肤，加油哦！</p>
+            <p>3. 错过某一天签到，可话费20Q币补签。</p>
+          </div>
+          <div class="ruler right" style="display: none">
+            <h2 class="seo">概率规则</h2>
+            <p style="">1.每天进行一次签到/补签即可随机增加人品1-10%；</p>
+            <p>2.被邀请好友成功签到后可为您随机增加人品10-20%；</p>
+            <p>3.当人品概率100%时达到‘人品暴击’，可拆红包，随机获得Q币奖励及道具；</p>
+            <p>4.每次人品暴击后将重置为30%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="invited" id="invited">
+    <input type="text" class="invited_link" id="invited_link" value="点击输入框即可生成邀请链接..." />
+    <button class="btn" id="invited_btn">复制链接</button>
+    <i class="close" onclick="closeDialog()">x</i>
+  </div>
+  <script src="http://ossweb-img.qq.com/images/js/title.js"></script>
+  <script src="http://ossweb-img.qq.com/images/js/foot.js"></script>
+  <script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.js"></script>
+  <script src="http://ossweb-img.qq.com/images/js/milo/milo-min.js"></script>
+  <!--[if IE 6]>
+<script src="http://http://game.gtimg.cn/images/yxs/cp/ossweb-img/comm/DD_belatedPNG-min.js"></script>
+<script>
+    DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+  <!--  统计代码-->
+  <script src="http://pingjs.qq.com/ping_tcss_ied.js"></script>
+  <script>
+  if (typeof(pgvMain) == 'function') pgvMain();
+  </script>
+  <!-- library E -->
+  <!-- Implementation -->
+  <script>
+  //文字无缝滚动
+  var marquee;
+
+  function textAnimation() {
+    if (!marquee) {
+      marquee = document.getElementById('marquee');
+      marquee.innerHTML = marquee.innerHTML + marquee.innerHTML;
+      var offset = 0;
+      var scrollheight = marquee.offsetHeight;
+      var firstNode = marquee.children[0].cloneNode(true);
+      marquee.appendChild(firstNode);
+      setInterval(function() {
+        if (offset >= scrollheight / 2) {
+          offset = 0;
+        }
+        marquee.style.marginTop = "-" + offset + "px";
+        offset += 1;
+      }, 50);
+    }
+
+  };
+
+  $(".qd-content li").hover(function() {
+    $(this).find(".hover-box").show();
+  }, function() {
+    $(this).find(".hover-box").hide();
+  })
+
+
+
+  function TGDialogS(e) {
+    need("biz.dialog-min", function(Dialog) {
+      Dialog.show({
+        id: e,
+        bgcolor: '#000', //弹出“遮罩”的颜色，格式为"#FF6600"，可修改，默认为"#fff"
+        opacity: 50 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
+      });
+    });
+  }
+
+  function closeDialog() {
+    need("biz.dialog-min", function(Dialog) {
+      Dialog.hide();
+    });
+  }
+
+
+  $('.nav-my-qd').click(function() {
+    $('.my-hb').hide();
+    $('.my-qd').show();
+  });
+
+  $('.nav-my-makeh').click(function() {
+    $('.my-hb').show();
+    $('.my-qd').hide();
+    textAnimation();
+  });
+  </script>
+  <!-- end Implementation -->
+</body>
+
+</html>
